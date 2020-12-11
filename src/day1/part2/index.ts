@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 interface findSumResult {
   success: boolean;
@@ -6,7 +6,7 @@ interface findSumResult {
   num2: number;
   num3: number;
 }
-const findSum = (arr: string[], sum: number): findSumResult => {
+export const findSum = (arr: string[], sum: number): findSumResult => {
   // Convert all strings to numbers
   let newArr = arr.map((num) => parseInt(num));
 
@@ -32,9 +32,9 @@ const findSum = (arr: string[], sum: number): findSumResult => {
   return { success: false, num1: 0, num2: 0, num3: 0 };
 };
 
-const setup = () => {
+export const setup = () => {
   const inputs = fs
-    .readFileSync(`${__dirname}/input.txt`)
+    .readFileSync(`${__dirname}/../input.txt`)
     .toString()
     .split('\n');
 
@@ -42,4 +42,3 @@ const setup = () => {
   if (success) return console.log(num1 * num2 * num3);
   return console.log('could not find sum');
 };
-setup();

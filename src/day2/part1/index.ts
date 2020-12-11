@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 const passwordIsValid = (password: string) => {
   const sections = password.split(' ');
@@ -32,4 +32,3 @@ const setup = () => {
   const validPasswords = inputs.filter((input) => passwordIsValid(input));
   console.log(validPasswords.length);
 };
-setup();
