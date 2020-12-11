@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const passwordIsValid = (password: string) => {
+export const passwordIsValid = (password: string) => {
   const sections = password.split(' ');
   if (sections.length === 3) {
     // Transform all of the data
