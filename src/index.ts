@@ -1,1 +1,1 @@
-require('./1/index');
+require('./2/index');
