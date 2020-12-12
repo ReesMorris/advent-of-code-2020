@@ -5,7 +5,7 @@ export const treesEncountered = (map: string[]) => {
 
   let total = 0;
   let x = 0;
-  for (let y = 0; y < map.length; y++) {
+  for (let y = 0; y < map.length; y += 1) {
     const row = map[y];
 
     if (row[x] === TREE) total += 1;
