@@ -1,6 +1,19 @@
 import fs from 'fs';
 
-export const treesEncountered = (map: string[]) => {};
+export const treesEncountered = (map: string[]) => {
+  const TREE = '#';
+
+  let total = 0;
+  let x = 0;
+  for (let y = 0; y < map.length; y++) {
+    const row = map[y];
+
+    if (row[x] === TREE) total += 1;
+    x = (x + 3) % row.length;
+  }
+
+  return total;
+};
 
 export const setup = () => {
   const inputs: string[] = fs
@@ -8,6 +21,5 @@ export const setup = () => {
     .toString()
     .split('\n');
 
-  // const validPasswords = inputs.filter((input) => passwordIsValid(input));
-  // console.log(validPasswords.length);
+  console.log(treesEncountered(inputs));
 };
