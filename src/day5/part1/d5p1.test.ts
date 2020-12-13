@@ -1,5 +1,8 @@
 import { getSeatID } from '.';
 
 test('getSeatID function works with example values', () => {
-  expect(getSeatID('FBFBBFFRLR')).toBe({ row: 44, col: 5, id: 357 });
+  const res = getSeatID('FBFBBFFRLR');
+  expect(res.row).toBe(44);
+  expect(res.col).toBe(5);
+  expect(res.id).toBe(357);
 });
