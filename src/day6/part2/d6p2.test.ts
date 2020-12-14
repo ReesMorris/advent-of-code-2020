@@ -4,21 +4,18 @@ test('totalSimilarAnswers function works with example values', () => {
   expect(totalSimilarAnswers(`abc`)).toBe(3);
 
   expect(
-    totalSimilarAnswers(`
-    a
+    totalSimilarAnswers(`a
     b
     c`)
   ).toBe(0);
 
   expect(
-    totalSimilarAnswers(`
-    ab
+    totalSimilarAnswers(`ab
     ac`)
   ).toBe(1);
 
   expect(
-    totalSimilarAnswers(`
-  a
+    totalSimilarAnswers(`a
   a
   a
   a`)
