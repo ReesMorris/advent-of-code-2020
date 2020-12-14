@@ -1,3 +1,3 @@
-const { setup } = require('./day6/part2');
+const { setup } = require('./day7/part1');
 
 setup();
