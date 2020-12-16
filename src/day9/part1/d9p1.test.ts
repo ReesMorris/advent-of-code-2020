@@ -1,8 +1,8 @@
-import { preambleContainsSum } from '.';
+import { missingPreambleSum } from '.';
 
-test('preambleContainsSum function works with example values', () => {
+test('missingPreambleSum function works with example values', () => {
   expect(
-    preambleContainsSum(
+    missingPreambleSum(
       `35
       20
       15
